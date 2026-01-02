@@ -1,0 +1,176 @@
+/* --- CSS Reset & Base Styles --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Default body font */
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.5;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container to match the width in the design */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* --- Typography Utilities --- */
+        h2, h3 {
+            font-family: 'Poppins', sans-serif; /* Headings font */
+            color: #000000;
+        }
+
+        /* --- Section Header Styles --- */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .btn-view-all {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid #e5e7eb; /* Light gray border */
+            border-radius: 999px; /* Pill shape */
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: #111111;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-view-all:hover {
+            border-color: #111111;
+            background-color: #f9fafb;
+        }
+
+        .btn-view-all i {
+            margin-left: 8px;
+            font-size: 12px;
+        }
+
+        /* --- Blog Grid Styles --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 40px 32px; /* Vertical gap 40px, Horizontal gap 32px */
+        }
+
+        /* --- Blog Card Component Styles --- */
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-image-container {
+            width: 100%;
+            aspect-ratio: 4 / 3; /* Ensures consistent image proportions */
+            overflow: hidden;
+            border-radius: 24px; /* Large rounded corners for images */
+            margin-bottom: 24px;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-image {
+            transform: scale(1.03); /* Subtle zoom effect on hover */
+        }
+
+        .blog-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #6b7280; /* Gray text color */
+            margin-bottom: 24px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .meta-item i {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .meta-separator {
+            margin: 0 12px;
+        }
+
+        .btn-read-more {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid #e5e7eb;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: #111111;
+            text-decoration: none;
+            align-self: flex-start; /* Prevents button from stretching */
+            transition: all 0.2s ease;
+        }
+
+        .btn-read-more:hover {
+            border-color: #111111;
+            background-color: #f9fafb;
+        }
+
+        .btn-read-more i {
+            margin-left: 8px;
+            font-size: 12px;
+        }
+
+        /* --- Responsive adjustments for smaller screens --- */
+        @media (max-width: 992px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+            }
+             .section-title {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .blog-grid {
+                grid-template-columns: 1fr; /* 1 column on mobile */
+                gap: 40px;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            .blog-title {
+                font-size: 20px;
+            }
+        }
