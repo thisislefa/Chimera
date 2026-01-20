@@ -5,7 +5,7 @@ Chimera is a high-fidelity, responsive web component designed for the elegant pr
 <img width="1588" height="1456" alt="lefajmofokeng github io_Chimera_ (1)" src="https://github.com/user-attachments/assets/782c0909-4e33-49a3-8f68-e5614c0cb590" />
 
 
-## LIve Deployment
+## Live Deployment
 [Previw Live Demo](https://lefajmofokeng.github.io/Chimera)
 
 ## Technical Architecture
